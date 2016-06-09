@@ -11,7 +11,7 @@
 
 ## Installing
 
-TODO: This plugin can probably be installed!
+Read the [installation instructions](./Install.md) for details on installing this plugin.
 
 
 ## Support
