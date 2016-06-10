@@ -5,8 +5,9 @@
 
 - [Installing](#installing)
 - [Support](#support)
-- [Developing](#developing)
 - [Deploying](#deploying)
+- [Resources](#resources)
+- [License](#license)
 
 
 ## Installing
@@ -19,16 +20,10 @@ Read the [installation instructions](./Install.md) for details on installing thi
 Priority for support is granted to customers with an independent contract with Windsor Circle.
 
 
-## Developing
-
-_Note: this section only applies if you are interested in contributing improvements to our Magento extension's source code. You don't need to read this to use the extension in your own store._
-
-TODO: We don't yet have detailed instructions for installing a local development version of Magento.
-
-
 ## Deploying
 
 TODO: This plugin might be deployable!
+
 
 ## Resources
 
