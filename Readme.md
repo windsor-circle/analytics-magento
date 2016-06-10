@@ -16,7 +16,7 @@ Read the [installation instructions](./Install.md) for details on installing thi
 
 ## Support
 
-TODO: This plugin might be supported!
+Priority for support is granted to customers with an independent contract with Windsor Circle.
 
 
 ## Developing
