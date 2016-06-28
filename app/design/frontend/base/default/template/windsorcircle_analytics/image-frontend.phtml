@@ -7,14 +7,14 @@
                 {
                     return;
                 }
-                if(!segment_analytics_viewedproduct || !segment_analytics_viewedproduct.params)
+                if(!windsorcircle_analytics_viewedproduct || !windsorcircle_analytics_viewedproduct.params)
                 {
                     return;
                 }
                 
                 window.analytics.track('Viewed Product Image',
                     {'src':     target.src,
-                     'product': segment_analytics_viewedproduct.params},
+                     'product': windsorcircle_analytics_viewedproduct.params},
                      <?php echo $this->getContextJson(); ?>
                 );
             });

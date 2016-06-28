@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Observer_Layered
+class WindsorCircle_Analytics_Model_Observer_Layered
 {
     static $_isFiltered;
     public function flagIsFiltered($observer)
@@ -19,7 +19,7 @@ class Segment_Analytics_Model_Observer_Layered
             return;
         }        
         
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();            
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();            
         $front->addDeferredAction('layerednavfilter',
             array('params'=>array('request'=>Mage::app()->getRequest()->getParams()))
         );          

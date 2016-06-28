@@ -1,6 +1,6 @@
 <config>
 	<sections>
-		<segment_analytics translate="label" module="segment_analytics">
+		<windsorcircle_analytics translate="label" module="windsorcircle_analytics">
             <label>Analytics</label>
             <tab>general</tab>
             <frontend_type>text</frontend_type>
@@ -60,6 +60,6 @@
 					</fields>
 				</options>
 			</groups>
-		</segment_analytics>
+		</windsorcircle_analytics>
 	</sections>
 </config>

@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Page extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Page extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {    
@@ -20,7 +20,7 @@ class Segment_Analytics_Model_Controller_Page extends Segment_Analytics_Model_Co
         }
         
         $title = Mage::getSingleton('core/layout')->getBlock('head')->getTitle();
-        $title = Mage::helper('segment_analytics')->getNormalizedPageTitle($title);
+        $title = Mage::helper('windsorcircle_analytics')->getNormalizedPageTitle($title);
         
         $block->setPageName($title);
 

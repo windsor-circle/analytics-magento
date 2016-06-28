@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Viewedproduct extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Viewedproduct extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {
@@ -9,7 +9,7 @@ class Segment_Analytics_Model_Controller_Viewedproduct extends Segment_Analytics
         if (!array_key_exists('id', $params) || is_null($params['id'])) {
             return;
         }
-        $product   = Mage::helper('segment_analytics')
+        $product   = Mage::helper('windsorcircle_analytics')
         ->getNormalizedProductInformation($params['id']);   
                 
         $block->setParams($product);

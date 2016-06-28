@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Observer_Admin
+class WindsorCircle_Analytics_Model_Observer_Admin
 {
     public function addExplainationTextToConfigScreen($observer)
     {
@@ -9,7 +9,7 @@ class Segment_Analytics_Model_Observer_Admin
             return;
         }
 
-        if($action->getRequest()->getParam('section') !== 'segment_analytics')
+        if($action->getRequest()->getParam('section') !== 'windsorcircle_analytics')
         {
             return;
         }
@@ -24,7 +24,7 @@ class Segment_Analytics_Model_Observer_Admin
 
         $json = new stdClass;
         $json->content = $layout->createBlock('adminhtml/template')
-        ->setTemplate('segment_analytics/welcome.phtml')
+        ->setTemplate('windsorcircle_analytics/welcome.phtml')
         ->toHtml();
     }
 }

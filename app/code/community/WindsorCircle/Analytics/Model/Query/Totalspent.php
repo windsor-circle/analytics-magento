@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Query_Totalspent
+class WindsorCircle_Analytics_Model_Query_Totalspent
 {
     public function fetchTotalSpent($customer_id)
     {

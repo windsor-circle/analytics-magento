@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Customerloggedout extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Customerloggedout extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {
@@ -9,7 +9,7 @@ class Segment_Analytics_Model_Controller_Customerloggedout extends Segment_Analy
             if(!array_key_exists($key, $customer)) { continue; }
             unset($customer[$key]);
         }
-        $customer = Mage::helper('segment_analytics')->getNormalizedCustomerInformation($customer);
+        $customer = Mage::helper('windsorcircle_analytics')->getNormalizedCustomerInformation($customer);
         $block->setUserId($customer['entity_id']);
         return $block;
     }

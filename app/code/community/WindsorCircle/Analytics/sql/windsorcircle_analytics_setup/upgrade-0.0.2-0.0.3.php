@@ -4,14 +4,14 @@ $extra      = '';
 if(file_exists($path_local))
 {
     //local.xml already exists, create file as segment.xml with info
-    $path_local = Mage::getBaseDir() . '/errors/segment_analytics_local.xml';
+    $path_local = Mage::getBaseDir() . '/errors/windsorcircle_analytics_local.xml';
     $extra      = 'Replace your current errors/local.xml with this file to enable Segment Tracking';
 }
 
 $xml = '<?xml version="1.0"?>
     <config>
         <!-- ' . $extra . '-->
-        <skin>segment_analytics</skin>
+        <skin>windsorcircle_analytics</skin>
     </config>
 ';
 

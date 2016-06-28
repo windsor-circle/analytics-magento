@@ -3,7 +3,7 @@
 * Front Controller for segment actions. Simple
 * static class to avoid extra Magento perf. overhead
 */
-class Segment_Analytics_Model_Front_Controller
+class WindsorCircle_Analytics_Model_Front_Controller
 {
     static protected $_instance;
     protected $_actions=array();
@@ -13,7 +13,7 @@ class Segment_Analytics_Model_Front_Controller
     {
         if(!self::$_instance)
         {
-            self::$_instance = new Segment_Analytics_Model_Front_Controller;
+            self::$_instance = new WindsorCircle_Analytics_Model_Front_Controller;
         }
         return self::$_instance;
     }
@@ -37,7 +37,7 @@ class Segment_Analytics_Model_Front_Controller
     
     public function clearDeferredActions()
     {
-        Mage::getSingleton('segment_analytics/session')
+        Mage::getSingleton('windsorcircle_analytics/session')
         ->setDeferredActions(array())
         ->setDeferredActionsData(array());
         #Mage::Log("Cleared Deferred Action");
@@ -46,7 +46,7 @@ class Segment_Analytics_Model_Front_Controller
     
     public function getDeferredActions()
     {
-        $actions = Mage::getSingleton('segment_analytics/session')
+        $actions = Mage::getSingleton('windsorcircle_analytics/session')
         ->getDeferredActions();
         $actions = $actions ? $actions : array();
         return $actions;
@@ -54,7 +54,7 @@ class Segment_Analytics_Model_Front_Controller
         
     protected function _getSession()
     {
-        return Mage::getSingleton('segment_analytics/session');
+        return Mage::getSingleton('windsorcircle_analytics/session');
     }
     
     public function addAction($action,$data=array())
@@ -69,7 +69,7 @@ class Segment_Analytics_Model_Front_Controller
         $blocks[] = array();
         foreach($this->_actions as $action)
         {
-            $class = 'Segment_Analytics_Model_Controller_' . ucwords($action);
+            $class = 'WindsorCircle_Analytics_Model_Controller_' . ucwords($action);
             $controller = new $class;
             $controller->setName($action)
             ->setData($this->_actionsData[$action]);
@@ -78,7 +78,7 @@ class Segment_Analytics_Model_Front_Controller
         
         foreach($this->getDeferredActions() as $action)
         {
-            $class = 'Segment_Analytics_Model_Controller_' . ucwords($action->action);
+            $class = 'WindsorCircle_Analytics_Model_Controller_' . ucwords($action->action);
             $controller = new $class;
             $controller->setName($action->action)
             ->setData($action->data);

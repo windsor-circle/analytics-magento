@@ -1,5 +1,5 @@
 <?php
-abstract class Segment_Analytics_Model_Controller_Base
+abstract class WindsorCircle_Analytics_Model_Controller_Base
 {
     protected $_name;
     protected $_data;
@@ -13,9 +13,9 @@ abstract class Segment_Analytics_Model_Controller_Base
     
     protected function _getDefaultBlock()
     {
-        $key = Mage::helper('segment_analytics')->getWriteKey();    
-        $block = $this->getLayout()->createBlock('segment_analytics/template')
-        ->setTemplate('segment_analytics/'.$this->getName().'.phtml')
+        $key = Mage::helper('windsorcircle_analytics')->getWriteKey();    
+        $block = $this->getLayout()->createBlock('windsorcircle_analytics/template')
+        ->setTemplate('windsorcircle_analytics/'.$this->getName().'.phtml')
         ->setKey($key);
         if(is_array($this->getData()))
         {

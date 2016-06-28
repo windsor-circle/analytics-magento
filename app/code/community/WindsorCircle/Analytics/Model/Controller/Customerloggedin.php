@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Customerloggedin extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Customerloggedin extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {
@@ -7,7 +7,7 @@ class Segment_Analytics_Model_Controller_Customerloggedin extends Segment_Analyt
         $block->setUserId($customer->getId());
         
         $data = $block->getData();        
-        $data = Mage::helper('segment_analytics')->getNormalizedCustomerInformation($data);
+        $data = Mage::helper('windsorcircle_analytics')->getNormalizedCustomerInformation($data);
         $block->setData($data);
         
         return $block;

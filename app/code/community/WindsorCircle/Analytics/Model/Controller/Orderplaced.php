@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Orderplaced extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Orderplaced extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {

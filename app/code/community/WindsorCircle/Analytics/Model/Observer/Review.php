@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Observer_Review
+class WindsorCircle_Analytics_Model_Observer_Review
 {
     static protected $_review;
     public function markReviewSaved($observer)
@@ -15,7 +15,7 @@ class Segment_Analytics_Model_Observer_Review
             return;
         }
         
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();            
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();            
         $front->addDeferredAction('reviewedproduct',
             array('review'=>$review->getData())
         );                    

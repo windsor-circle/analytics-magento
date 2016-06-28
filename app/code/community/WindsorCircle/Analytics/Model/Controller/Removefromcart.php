@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Removefromcart extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Removefromcart extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {
@@ -7,7 +7,7 @@ class Segment_Analytics_Model_Controller_Removefromcart extends Segment_Analytic
         $product   = Mage::getModel('catalog/product_api')
         ->info($params['product_id']);
 
-        $product = Mage::helper('segment_analytics')
+        $product = Mage::helper('windsorcircle_analytics')
         ->getNormalizedProductInformation($product);
 
         $block->setProduct($product);

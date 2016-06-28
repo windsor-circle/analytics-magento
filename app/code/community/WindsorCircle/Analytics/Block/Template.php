@@ -1,9 +1,9 @@
 <?php
-class Segment_Analytics_Block_Template extends Mage_Core_Block_Template
+class WindsorCircle_Analytics_Block_Template extends Mage_Core_Block_Template
 {
     public function renderDataAsJsonVar($var_name)
     {
-        return $this->getLayout()->createBlock('segment_analytics/json')
+        return $this->getLayout()->createBlock('windsorcircle_analytics/json')
         ->setData($this->getData())
         ->setVarName($var_name)
         ->toHtml();
@@ -12,7 +12,7 @@ class Segment_Analytics_Block_Template extends Mage_Core_Block_Template
     public function renderDataAsJsonObject($key=false)
     {
         $data = $key ? $this->getData($key) : $this->getData();
-        return $this->getLayout()->createBlock('segment_analytics/json')
+        return $this->getLayout()->createBlock('windsorcircle_analytics/json')
         ->setData($data)
         ->setAsRawObject(true)
         ->toHtml();
@@ -20,11 +20,11 @@ class Segment_Analytics_Block_Template extends Mage_Core_Block_Template
 
     public function getContextJson()
     {
-        $renderer = $this->getLayout()->createBlock('segment_analytics/json')
+        $renderer = $this->getLayout()->createBlock('windsorcircle_analytics/json')
         ->setData(array(
             'library'=> array(
                 'name'=>'analytics-magento',
-                'version'=>(string) Mage::getConfig()->getNode()->modules->Segment_Analytics->version
+                'version'=>(string) Mage::getConfig()->getNode()->modules->WindsorCircle_Analytics->version
         )));
         return $renderer->toJsonString();
     }

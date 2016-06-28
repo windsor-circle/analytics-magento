@@ -1,304 +1,304 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<modules>
-		<Segment_Analytics>
+		<WindsorCircle_Analytics>
 			<version>2.0.1</version>
-		</Segment_Analytics>
+		</WindsorCircle_Analytics>
 	</modules>
 	<frontend>
 		<routers>
-			<segment_analytics>
+			<windsorcircle_analytics>
 				<use>standard</use>
 				<args>
-					<module>Segment_Analytics</module>
-					<frontName>segment_analytics</frontName>
+					<module>WindsorCircle_Analytics</module>
+					<frontName>windsorcircle_analytics</frontName>
 				</args>
-			</segment_analytics>
+			</windsorcircle_analytics>
 		</routers>
 	</frontend>
 	<global>
 	    <resources>
-            <segment_analytics_setup>
+            <windsorcircle_analytics_setup>
                 <setup>
-                    <module>Segment_Analytics</module>
-                    <class>Segment_Analytics_Model_Resource_Setup</class>
+                    <module>WindsorCircle_Analytics</module>
+                    <class>WindsorCircle_Analytics_Model_Resource_Setup</class>
                 </setup>
-            </segment_analytics_setup>
+            </windsorcircle_analytics_setup>
 	    </resources>
         <events>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_scripts_addfrontend>
+              <windsorcircle_analyticsmore_scripts_addfrontend>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>addFrotnendScripts</method>
-              </segment_analyticsmore_scripts_addfrontend>
+              </windsorcircle_analyticsmore_scripts_addfrontend>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <customer_login>
             <observers>
-              <segment_analyticsmore_scripts>
+              <windsorcircle_analyticsmore_scripts>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>loggedIn</method>
-              </segment_analyticsmore_scripts>
+              </windsorcircle_analyticsmore_scripts>
             </observers>
           </customer_login>
 
           <customer_logout>
             <observers>
-              <segment_analyticsmore_scripts>
+              <windsorcircle_analyticsmore_scripts>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>loggedOut</method>
-              </segment_analyticsmore_scripts>
+              </windsorcircle_analyticsmore_scripts>
             </observers>
           </customer_logout>
 
           <checkout_cart_add_product_complete>
             <observers>
-              <segment_analyticsmore_scripts>
+              <windsorcircle_analyticsmore_scripts>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>addToCart</method>
-              </segment_analyticsmore_scripts>
+              </windsorcircle_analyticsmore_scripts>
             </observers>
           </checkout_cart_add_product_complete>
 
           <sales_quote_remove_item>
             <observers>
-              <segment_analyticsmore_scripts_remove_item>
+              <windsorcircle_analyticsmore_scripts_remove_item>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>removeFromCart</method>
-              </segment_analyticsmore_scripts_remove_item>
+              </windsorcircle_analyticsmore_scripts_remove_item>
             </observers>
           </sales_quote_remove_item>
 
           <controller_action_layout_render_before>
             <observers>
-              <segment_analyticsmore_blocks>
+              <windsorcircle_analyticsmore_blocks>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>addContainerBlock</method>
-              </segment_analyticsmore_blocks>
+              </windsorcircle_analyticsmore_blocks>
             </observers>
           </controller_action_layout_render_before>
 
           <catalogsearch_query_load_after>
             <observers>
-              <segment_analyticsmore_search>
+              <windsorcircle_analyticsmore_search>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>loadedSearch</method>
-              </segment_analyticsmore_search>
+              </windsorcircle_analyticsmore_search>
             </observers>
           </catalogsearch_query_load_after>
 
           <customer_register_success>
             <observers>
-              <segment_analyticsmore_customer_register_success>
+              <windsorcircle_analyticsmore_customer_register_success>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>customerRegistered</method>
-              </segment_analyticsmore_customer_register_success>
+              </windsorcircle_analyticsmore_customer_register_success>
             </observers>
           </customer_register_success>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_category_view_for_share_tab>
+              <windsorcircle_analyticsmore_category_view_for_share_tab>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>addClickedShareJavascript</method>
-              </segment_analyticsmore_category_view_for_share_tab>
+              </windsorcircle_analyticsmore_category_view_for_share_tab>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_category_view_for_review_tab>
+              <windsorcircle_analyticsmore_category_view_for_review_tab>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>addClickedReviewTabJavascript</method>
-              </segment_analyticsmore_category_view_for_review_tab>
+              </windsorcircle_analyticsmore_category_view_for_review_tab>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_category_view_for_image_thumbs>
+              <windsorcircle_analyticsmore_category_view_for_image_thumbs>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>viewedImageFrontendTrack</method>
-              </segment_analyticsmore_category_view_for_image_thumbs>
+              </windsorcircle_analyticsmore_category_view_for_image_thumbs>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_category_view_for_filtering>
+              <windsorcircle_analyticsmore_category_view_for_filtering>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>categoryViewForFiltering</method>
-              </segment_analyticsmore_category_view_for_filtering>
+              </windsorcircle_analyticsmore_category_view_for_filtering>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_category_view_for_welcome>
+              <windsorcircle_analyticsmore_category_view_for_welcome>
                 <type>singleton</type>
-                <class>segment_analytics/observer_admin</class>
+                <class>windsorcircle_analytics/observer_admin</class>
                 <method>addExplainationTextToConfigScreen</method>
-              </segment_analyticsmore_category_view_for_welcome>
+              </windsorcircle_analyticsmore_category_view_for_welcome>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <catalog_product_collection_apply_limitations_after>
             <observers>
-              <segment_analyticsmore_catalog_product_collection_apply_limitations_after>
+              <windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
                 <type>singleton</type>
-                <class>segment_analytics/observer_layered</class>
+                <class>windsorcircle_analytics/observer_layered</class>
                 <method>flagIsFiltered</method>
-              </segment_analyticsmore_catalog_product_collection_apply_limitations_after>
+              </windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
             </observers>
           </catalog_product_collection_apply_limitations_after>
 
           <controller_action_predispatch_catalog_product_gallery>
             <observers>
-              <segment_analyticsmore_catalog_product_collection_apply_limitations_after>
+              <windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>productGalleryViewed</method>
-              </segment_analyticsmore_catalog_product_collection_apply_limitations_after>
+              </windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
             </observers>
           </controller_action_predispatch_catalog_product_gallery>
 
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_category_view>
+              <windsorcircle_analyticsmore_category_view>
                 <type>singleton</type>
-                <class>segment_analytics/observer_layered</class>
+                <class>windsorcircle_analytics/observer_layered</class>
                 <method>addLayeredLimitation</method>
-              </segment_analyticsmore_category_view>
+              </windsorcircle_analyticsmore_category_view>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_review_view>
+              <windsorcircle_analyticsmore_review_view>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>reviewView</method>
-              </segment_analyticsmore_review_view>
+              </windsorcircle_analyticsmore_review_view>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <controller_action_layout_generate_blocks_after>
             <observers>
-              <segment_analyticsmore_product_view>
+              <windsorcircle_analyticsmore_product_view>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>productView</method>
-              </segment_analyticsmore_product_view>
+              </windsorcircle_analyticsmore_product_view>
             </observers>
           </controller_action_layout_generate_blocks_after>
 
           <core_abstract_save_after>
             <observers>
-              <segment_analyticsmore_amasty_fav_save_after>
+              <windsorcircle_analyticsmore_amasty_fav_save_after>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>favSaved</method>
-              </segment_analyticsmore_amasty_fav_save_after>
+              </windsorcircle_analyticsmore_amasty_fav_save_after>
             </observers>
           </core_abstract_save_after>
 
           <review_save_after>
             <observers>
-              <segment_analyticsmore_review_save_after>
+              <windsorcircle_analyticsmore_review_save_after>
                 <type>singleton</type>
-                <class>segment_analytics/observer_review</class>
+                <class>windsorcircle_analytics/observer_review</class>
                 <method>markReviewSaved</method>
-              </segment_analyticsmore_review_save_after>
+              </windsorcircle_analyticsmore_review_save_after>
             </observers>
           </review_save_after>
 
           <controller_action_postdispatch_review_product_post>
             <observers>
-              <segment_analyticsmore_review_product_post>
+              <windsorcircle_analyticsmore_review_product_post>
                 <type>singleton</type>
-                <class>segment_analytics/observer_review</class>
+                <class>windsorcircle_analytics/observer_review</class>
                 <method>reviewedProduct</method>
-              </segment_analyticsmore_review_product_post>
+              </windsorcircle_analyticsmore_review_product_post>
             </observers>
           </controller_action_postdispatch_review_product_post>
 
           <newsletter_subscriber_save_after>
             <observers>
-              <segment_analyticsmore_newsletter_save_after>
+              <windsorcircle_analyticsmore_newsletter_save_after>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>newsletterSubscriber</method>
-              </segment_analyticsmore_newsletter_save_after>
+              </windsorcircle_analyticsmore_newsletter_save_after>
             </observers>
           </newsletter_subscriber_save_after>
 
           <wishlist_add_product>
             <observers>
-              <segment_analyticsmore_wishlist_add>
+              <windsorcircle_analyticsmore_wishlist_add>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>wishlistAddProduct</method>
-              </segment_analyticsmore_wishlist_add>
+              </windsorcircle_analyticsmore_wishlist_add>
             </observers>
           </wishlist_add_product>
 
           <sales_order_place_after>
             <observers>
-              <segment_analyticsmore_sales_order_place_after>
+              <windsorcircle_analyticsmore_sales_order_place_after>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>orderPlaced</method>
-              </segment_analyticsmore_sales_order_place_after>
+              </windsorcircle_analyticsmore_sales_order_place_after>
             </observers>
           </sales_order_place_after>
 
           <core_block_abstract_to_html_after>
             <observers>
-              <segment_analyticsmore_sales_logger>
+              <windsorcircle_analyticsmore_sales_logger>
                 <type>singleton</type>
-                <class>segment_analytics/observer</class>
+                <class>windsorcircle_analytics/observer</class>
                 <method>logBlockHtml</method>
-              </segment_analyticsmore_sales_logger>
+              </windsorcircle_analyticsmore_sales_logger>
             </observers>
           </core_block_abstract_to_html_after>
 
         </events>
 
 		<blocks>
-			<segment_analytics>
-				<class>Segment_Analytics_Block</class>
-			</segment_analytics>
+			<windsorcircle_analytics>
+				<class>WindsorCircle_Analytics_Block</class>
+			</windsorcircle_analytics>
 		</blocks>
 		<models>
-			<segment_analytics>
-				<class>Segment_Analytics_Model</class>
-			</segment_analytics>
+			<windsorcircle_analytics>
+				<class>WindsorCircle_Analytics_Model</class>
+			</windsorcircle_analytics>
 		</models>
 		<helpers>
-			<segment_analytics>
-				<class>Segment_Analytics_Helper</class>
-			</segment_analytics>
+			<windsorcircle_analytics>
+				<class>WindsorCircle_Analytics_Helper</class>
+			</windsorcircle_analytics>
 		</helpers>
 	</global>
 
 	<default>
-	    <segment_analytics>
+	    <windsorcircle_analytics>
 	        <options>
 	            <customer_traits>
 created_at
@@ -314,21 +314,21 @@ total_orders
 total_spent
 </customer_traits>
 	        </options>
-	    </segment_analytics>
+	    </windsorcircle_analytics>
 
-      <segment_analytics>
+      <windsorcircle_analytics>
           <options>
               <product_properties>
 </product_properties>
           </options>
-      </segment_analytics>
-      <segment_analytics>
+      </windsorcircle_analytics>
+      <windsorcircle_analytics>
           <options>
               <logout_flush>
                 0
               </logout_flush>
           </options>
-      </segment_analytics>
+      </windsorcircle_analytics>
 	</default>
 
 

@@ -3,7 +3,7 @@ document.observe('dom:loaded',function(){
     var shared_product = function(network)
     {
         analytics.track("Shared Product",
-        {'product': segment_analytics_viewedproduct.params,
+        {'product': windsorcircle_analytics_viewedproduct.params,
          'network':network},
         <?php echo $this->getContextJson(); ?>);            
     }

@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Block_Json extends Mage_Core_Block_Abstract
+class WindsorCircle_Analytics_Block_Json extends Mage_Core_Block_Abstract
 {
     protected function _toHtml()
     {

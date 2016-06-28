@@ -1,7 +1,7 @@
 <?php
-class Segment_Analytics_Model_Observer
+class WindsorCircle_Analytics_Model_Observer
 {
-    const CONTAINER_BLOCKNAME = 'segment_analytics_before_body_end';
+    const CONTAINER_BLOCKNAME = 'windsorcircle_analytics_before_body_end';
 
     public function addContainerBlock($observer)
     {
@@ -21,14 +21,14 @@ class Segment_Analytics_Model_Observer
             return;
         }
 
-        if(!Mage::helper('segment_analytics')->isEnabled())
+        if(!Mage::helper('windsorcircle_analytics')->isEnabled())
         {
             return;
         }
 
         $container = $layout->createBlock('core/text_list', self::CONTAINER_BLOCKNAME);
         $before_body_end->append($container);
-        $front = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $blocks = $front->getBlocks();
 
         foreach($blocks as $block)
@@ -54,12 +54,12 @@ class Segment_Analytics_Model_Observer
         {
             return;
         }
-        if(!Mage::helper('segment_analytics')->isEnabled())
+        if(!Mage::helper('windsorcircle_analytics')->isEnabled())
         {
             return;
         }
 
-        $front = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addAction('init');
         $front->addDeferredAction('identity');
         $front->addAction('page');
@@ -67,7 +67,7 @@ class Segment_Analytics_Model_Observer
 
     public function loggedIn($observer)
     {
-        $front = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('alias');
         $front->addDeferredAction('identity');
         $front->addDeferredAction('customerloggedin');
@@ -75,7 +75,7 @@ class Segment_Analytics_Model_Observer
 
     public function loggedOut($observer)
     {
-        $front = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('customerloggedout', array(
             'customer'=>$this->_getCustomerData()
         ));
@@ -84,7 +84,7 @@ class Segment_Analytics_Model_Observer
     public function addToCart($observer)
     {
         $product = $observer->getProduct();
-        $front = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('addtocart',
             array('params'=>array('product_id'=>$product->getId()))
         );
@@ -93,7 +93,7 @@ class Segment_Analytics_Model_Observer
     public function removeFromCart($observer)
     {
         $product    = $observer->getQuoteItem()->getProduct();
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('removefromcart',
             array('params'=>array('product_id'=>$product->getId()))
         );
@@ -102,7 +102,7 @@ class Segment_Analytics_Model_Observer
     public function customerRegistered($observer)
     {
         $customer = $observer->getCustomer();
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('customerregistered',
             array('customer_id'=>$customer->getEntityId())
         );
@@ -112,7 +112,7 @@ class Segment_Analytics_Model_Observer
     {
         $o = $observer->getDataObject();
         if(!$o){return;}
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('searchedproducts',
             array('query'=>$o->getQueryText())
         );
@@ -135,7 +135,7 @@ class Segment_Analytics_Model_Observer
             return;
         }
 
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('filteredproducts',
             array('params'=>$params)
         );
@@ -157,7 +157,7 @@ class Segment_Analytics_Model_Observer
             return;
         }
 
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('viewedproduct',
             array('params'=>$params)
         );
@@ -165,7 +165,7 @@ class Segment_Analytics_Model_Observer
 
     public function favSaved($observer)
     {
-        $front  = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front  = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $item   = $observer->getData('data_object');
 
         if($item->getResourceName() == 'amlist/item')
@@ -191,7 +191,7 @@ class Segment_Analytics_Model_Observer
             return;
         }
 
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('viewedreviews',
             array('params'=>$params)
         );
@@ -206,7 +206,7 @@ class Segment_Analytics_Model_Observer
             return;
         }
 
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('subscribenewsletter',
             array('subscriber'=>$subscriber->getData())
         );
@@ -217,7 +217,7 @@ class Segment_Analytics_Model_Observer
         $product  = $observer->getProduct();
         $wishlist = $observer->getWishlist();
 
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('addedtowishlist',
             array('params'=>array('product_id'=>$product->getId()))
         );
@@ -226,7 +226,7 @@ class Segment_Analytics_Model_Observer
 
     public function viewedImageFrontendTrack($observer)
     {
-        if(!Mage::helper('segment_analytics')->isEnabled())
+        if(!Mage::helper('windsorcircle_analytics')->isEnabled())
         {
             return;
         }
@@ -240,14 +240,14 @@ class Segment_Analytics_Model_Observer
         if(!$content) { return; }
 
         $content->append(
-            $layout->createBlock('segment_analytics/template')
-            ->setTemplate('segment_analytics/image-frontend.phtml')
+            $layout->createBlock('windsorcircle_analytics/template')
+            ->setTemplate('windsorcircle_analytics/image-frontend.phtml')
         );
     }
 
     public function orderPlaced($observer)
     {
-        $front      = Segment_Analytics_Model_Front_Controller::getInstance();
+        $front      = WindsorCircle_Analytics_Model_Front_Controller::getInstance();
         $front->addDeferredAction('orderplaced',
             array('params'=>array(
                 'order_id'=>$observer->getOrder()->getId(),
@@ -284,8 +284,8 @@ class Segment_Analytics_Model_Observer
             return;
         }
 
-        $block = $layout->createBlock('segment_analytics/template')
-        ->setTemplate('segment_analytics/share-frontend.phtml');
+        $block = $layout->createBlock('windsorcircle_analytics/template')
+        ->setTemplate('windsorcircle_analytics/share-frontend.phtml');
 
         $content->append($block);
     }
@@ -307,8 +307,8 @@ class Segment_Analytics_Model_Observer
         {
             return;
         }
-        $block = $layout->createBlock('segment_analytics/template')
-        ->setTemplate('segment_analytics/review-frontend.phtml');
+        $block = $layout->createBlock('windsorcircle_analytics/template')
+        ->setTemplate('windsorcircle_analytics/review-frontend.phtml');
 
         $content->append($block);
     }
@@ -330,7 +330,7 @@ class Segment_Analytics_Model_Observer
         $customer = $this->_getCustomer();
         if($customer)
         {
-            $customer = Mage::helper('segment_analytics')->getNormalizedCustomerInformation($customer->getData());
+            $customer = Mage::helper('windsorcircle_analytics')->getNormalizedCustomerInformation($customer->getData());
             return $customer;
         }
         return array();

@@ -7,9 +7,9 @@
                         <children>
                             <config>
                                 <children>
-                                    <segment_analytics>
+                                    <windsorcircle_analytics>
                                         <title>Segment Options</title>
-                                    </segment_analytics>
+                                    </windsorcircle_analytics>
                                 </children>
                             </config>
                         </children>

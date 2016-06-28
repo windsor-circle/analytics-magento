@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Addedtowishlist extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Addedtowishlist extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {
@@ -7,7 +7,7 @@ class Segment_Analytics_Model_Controller_Addedtowishlist extends Segment_Analyti
         $info   = Mage::getModel('catalog/product_api')
         ->info($params['product_id']);
         
-        $info = Mage::helper('segment_analytics')
+        $info = Mage::helper('windsorcircle_analytics')
         ->getNormalizedProductInformation($info); 
         
         $want = array('sku', 'price', 'name');

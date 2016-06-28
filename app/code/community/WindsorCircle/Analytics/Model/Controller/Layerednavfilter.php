@@ -1,11 +1,11 @@
 <?php
-class Segment_Analytics_Model_Controller_Layerednavfilter extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Layerednavfilter extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {
         $params = $block->getParams();
         
-        $params['category'] = Mage::helper('segment_analytics')
+        $params['category'] = Mage::helper('windsorcircle_analytics')
         ->getCategoryNamesFromIds($params['request']['id']);
         $block->setParams($params);
         

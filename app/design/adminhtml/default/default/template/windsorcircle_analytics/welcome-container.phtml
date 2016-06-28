@@ -1,0 +1,6 @@
+<script type="text/javascript">
+    var windsorcircle_analytics_intro = <?php echo $this->getContentJson();?>;
+    document.observe('dom:loaded', function(){
+        $('config_edit_form').innerHTML = windsorcircle_analytics_intro.content + $('config_edit_form').innerHTML;
+    });
+</script>

@@ -1,14 +1,14 @@
 <?php
-class Segment_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
+class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
 {
     public function getWriteKey()
     {
-        return Mage::getStoreConfig('segment_analytics/options/write_key');
+        return Mage::getStoreConfig('windsorcircle_analytics/options/write_key');
     }
 
     public function flushAfterLogout()
     {
-        return Mage::getStoreConfig('segment_analytics/options/logout_flush');
+        return Mage::getStoreConfig('windsorcircle_analytics/options/logout_flush');
     }
 
     public function isAdmin()
@@ -72,7 +72,7 @@ class Segment_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
         $data = $this->_normalizeDatesToISO8601($data);
 
         //only
-        $fields = trim(Mage::getStoreConfig('segment_analytics/options/customer_traits'));
+        $fields = trim(Mage::getStoreConfig('windsorcircle_analytics/options/customer_traits'));
         $to_send = preg_split('%[\n\r]%', $fields, -1, PREG_SPLIT_NO_EMPTY);
 
         $data_final = array();
@@ -131,7 +131,7 @@ class Segment_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
             unset($product['product_id']);
         }
 
-        $blacklist = trim(Mage::getStoreConfig('segment_analytics/options/product_properties'));
+        $blacklist = trim(Mage::getStoreConfig('windsorcircle_analytics/options/product_properties'));
         $blacklistedFields = preg_split('%[\n\r]%', $blacklist, -1, PREG_SPLIT_NO_EMPTY);
 
         foreach($blacklistedFields as $key)

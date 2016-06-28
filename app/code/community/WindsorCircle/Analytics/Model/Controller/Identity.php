@@ -1,5 +1,5 @@
 <?php
-class Segment_Analytics_Model_Controller_Identity extends Segment_Analytics_Model_Controller_Base
+class WindsorCircle_Analytics_Model_Controller_Identity extends WindsorCircle_Analytics_Model_Controller_Base
 {
     public function getBlock($block)
     {
@@ -33,11 +33,11 @@ class Segment_Analytics_Model_Controller_Identity extends Segment_Analytics_Mode
         ->setLastName($customer->getLastname())
         ->setMiddleName($customer->getMiddlename())
         ->setTotalOrders(
-            Mage::getSingleton('segment_analytics/query_totalpurchased')
+            Mage::getSingleton('windsorcircle_analytics/query_totalpurchased')
             ->fetchTotalOrders($customer->getId())
         )
         ->setTotalSpent(
-            Mage::getSingleton('segment_analytics/query_totalspent')
+            Mage::getSingleton('windsorcircle_analytics/query_totalspent')
             ->fetchTotalSpent($customer->getId())
         )
         ->unsetData('password_hash')
@@ -58,7 +58,7 @@ class Segment_Analytics_Model_Controller_Identity extends Segment_Analytics_Mode
             ->setData('street',     $street);
         }
         $data = $block->getData();
-        $data = Mage::helper('segment_analytics')->getNormalizedCustomerInformation($data);
+        $data = Mage::helper('windsorcircle_analytics')->getNormalizedCustomerInformation($data);
         $block->setData($data);
         return $block;
     }
