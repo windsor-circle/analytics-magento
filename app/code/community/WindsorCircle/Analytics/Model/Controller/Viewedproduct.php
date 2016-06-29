@@ -11,6 +11,10 @@ class WindsorCircle_Analytics_Model_Controller_Viewedproduct extends WindsorCirc
         }
         $product   = Mage::helper('windsorcircle_analytics')
         ->getNormalizedProductInformation($params['id']);   
+        // Replace the category ids with their names.
+        $categories  = Mage::helper('windsorcircle_analytics')
+        ->getCategoryNamesFromIds($product['categories']);   
+        $product['categories'] = $categories;
                 
         $block->setParams($product);
         return $block;
