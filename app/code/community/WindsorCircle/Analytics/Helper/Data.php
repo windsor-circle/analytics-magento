@@ -115,6 +115,7 @@ class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
         {
             $product['categories'][] = $category->getName();
         }
+        $product['categories'] = $this->getCategoryNamesFromIds($product['categories']);
 
         //cast numerics as floats per segment requirements
         $as_float = array('price','weight');
