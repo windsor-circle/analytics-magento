@@ -11,10 +11,6 @@ class Segment_Analytics_Model_Controller_Viewedproduct extends Segment_Analytics
         }
         $product   = Mage::helper('segment_analytics')
         ->getNormalizedProductInformation($params['id']);   
-        // Replace the category ids with their names.
-        $categories  = Mage::helper('segment_analytics')
-        ->getCategoryNamesFromIds($product['categories']);   
-        $product['categories'] = $categories;
                 
         $block->setParams($product);
         return $block;
