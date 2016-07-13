@@ -1,0 +1,6 @@
+<?php //echo $this->renderDataAsJsonVar("windsorcircle_analytics_orderplaced");?>
+<script type="text/javascript">
+    analytics.track("Completed Order",
+    <?php echo $this->renderDataAsJsonObject('params'); ?>,
+    <?php echo $this->getContextJson(); ?>);
+</script>    

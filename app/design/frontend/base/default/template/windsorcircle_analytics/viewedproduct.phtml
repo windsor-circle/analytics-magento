@@ -1,0 +1,9 @@
+<?php 
+    //windsorcircle_analytics_viewedproduct also used by various *-frontend phtml templates
+    echo $this->renderDataAsJsonVar("windsorcircle_analytics_viewedproduct");
+?>
+<script type="text/javascript">
+    analytics.track("Viewed Product",
+    <?php echo $this->renderDataAsJsonObject('params'); ?>,
+    <?php echo $this->getContextJson(); ?>);        
+</script>    

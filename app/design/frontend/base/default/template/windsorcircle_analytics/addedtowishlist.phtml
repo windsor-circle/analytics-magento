@@ -1,0 +1,7 @@
+<?php //echo $this->renderDataAsJsonVar("windsorcircle_analytics_addedtowishlist");?>
+<script type="text/javascript">
+    analytics.track("Wishlisted Product",
+    <?php echo $this->renderDataAsJsonObject('params'); ?>,
+    <?php echo $this->getContextJson(); ?>
+    );
+</script>    

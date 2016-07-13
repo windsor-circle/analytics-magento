@@ -34,7 +34,7 @@ Before deploying, make sure to pull in the latest changes from the remote reposi
 
     $ git pull origin master
 
-The first step after making your changes to the extension source is to tag a new release of the extension. To do that, first bump the version number in [`app/etc/modules/Segment_Analytics.xml`](app/code/community/Segment/Analytics/etc/config.xml).
+The first step after making your changes to the extension source is to tag a new release of the extension. To do that, first bump the version number in [`app/etc/modules/WindsorCircle_Analytics.xml`](app/code/community/WindsorCircle/Analytics/etc/config.xml).
 
 Then, update [`History.md`](History.md) with a summary of your changes.
 

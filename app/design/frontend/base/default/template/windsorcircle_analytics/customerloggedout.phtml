@@ -1,0 +1,9 @@
+<?php //echo $this->renderDataAsJsonVar('windsorcircle_analytics_customerloggedout');
+$flush = Mage::helper('windsorcircle_analytics')->flushAfterLogout();
+?>
+<script type="text/javascript">
+    analytics.track('Logged Out',{},
+    <?php echo $this->getContextJson(); ?>, function() {
+      <?php if ($flush) { echo 'analytics.reset()'; } ?>
+    });
+</script>

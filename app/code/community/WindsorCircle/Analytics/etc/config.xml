@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<WindsorCircle_Analytics>
+			<version>2.0.1</version>
+		</WindsorCircle_Analytics>
+	</modules>
+	<frontend>
+		<routers>
+			<windsorcircle_analytics>
+				<use>standard</use>
+				<args>
+					<module>WindsorCircle_Analytics</module>
+					<frontName>windsorcircle_analytics</frontName>
+				</args>
+			</windsorcircle_analytics>
+		</routers>
+	</frontend>
+	<global>
+	    <resources>
+            <windsorcircle_analytics_setup>
+                <setup>
+                    <module>WindsorCircle_Analytics</module>
+                    <class>WindsorCircle_Analytics_Model_Resource_Setup</class>
+                </setup>
+            </windsorcircle_analytics_setup>
+	    </resources>
+        <events>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_scripts_addfrontend>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>addFrotnendScripts</method>
+              </windsorcircle_analyticsmore_scripts_addfrontend>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <customer_login>
+            <observers>
+              <windsorcircle_analyticsmore_scripts>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>loggedIn</method>
+              </windsorcircle_analyticsmore_scripts>
+            </observers>
+          </customer_login>
+
+          <customer_logout>
+            <observers>
+              <windsorcircle_analyticsmore_scripts>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>loggedOut</method>
+              </windsorcircle_analyticsmore_scripts>
+            </observers>
+          </customer_logout>
+
+          <checkout_cart_add_product_complete>
+            <observers>
+              <windsorcircle_analyticsmore_scripts>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>addToCart</method>
+              </windsorcircle_analyticsmore_scripts>
+            </observers>
+          </checkout_cart_add_product_complete>
+
+          <sales_quote_remove_item>
+            <observers>
+              <windsorcircle_analyticsmore_scripts_remove_item>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>removeFromCart</method>
+              </windsorcircle_analyticsmore_scripts_remove_item>
+            </observers>
+          </sales_quote_remove_item>
+
+          <controller_action_layout_render_before>
+            <observers>
+              <windsorcircle_analyticsmore_blocks>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>addContainerBlock</method>
+              </windsorcircle_analyticsmore_blocks>
+            </observers>
+          </controller_action_layout_render_before>
+
+          <catalogsearch_query_load_after>
+            <observers>
+              <windsorcircle_analyticsmore_search>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>loadedSearch</method>
+              </windsorcircle_analyticsmore_search>
+            </observers>
+          </catalogsearch_query_load_after>
+
+          <customer_register_success>
+            <observers>
+              <windsorcircle_analyticsmore_customer_register_success>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>customerRegistered</method>
+              </windsorcircle_analyticsmore_customer_register_success>
+            </observers>
+          </customer_register_success>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_category_view_for_share_tab>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>addClickedShareJavascript</method>
+              </windsorcircle_analyticsmore_category_view_for_share_tab>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_category_view_for_review_tab>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>addClickedReviewTabJavascript</method>
+              </windsorcircle_analyticsmore_category_view_for_review_tab>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_category_view_for_image_thumbs>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>viewedImageFrontendTrack</method>
+              </windsorcircle_analyticsmore_category_view_for_image_thumbs>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_category_view_for_filtering>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>categoryViewForFiltering</method>
+              </windsorcircle_analyticsmore_category_view_for_filtering>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_category_view_for_welcome>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer_admin</class>
+                <method>addExplainationTextToConfigScreen</method>
+              </windsorcircle_analyticsmore_category_view_for_welcome>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <catalog_product_collection_apply_limitations_after>
+            <observers>
+              <windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer_layered</class>
+                <method>flagIsFiltered</method>
+              </windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
+            </observers>
+          </catalog_product_collection_apply_limitations_after>
+
+          <controller_action_predispatch_catalog_product_gallery>
+            <observers>
+              <windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>productGalleryViewed</method>
+              </windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
+            </observers>
+          </controller_action_predispatch_catalog_product_gallery>
+
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_category_view>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer_layered</class>
+                <method>addLayeredLimitation</method>
+              </windsorcircle_analyticsmore_category_view>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_review_view>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>reviewView</method>
+              </windsorcircle_analyticsmore_review_view>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <controller_action_layout_generate_blocks_after>
+            <observers>
+              <windsorcircle_analyticsmore_product_view>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>productView</method>
+              </windsorcircle_analyticsmore_product_view>
+            </observers>
+          </controller_action_layout_generate_blocks_after>
+
+          <core_abstract_save_after>
+            <observers>
+              <windsorcircle_analyticsmore_amasty_fav_save_after>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>favSaved</method>
+              </windsorcircle_analyticsmore_amasty_fav_save_after>
+            </observers>
+          </core_abstract_save_after>
+
+          <review_save_after>
+            <observers>
+              <windsorcircle_analyticsmore_review_save_after>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer_review</class>
+                <method>markReviewSaved</method>
+              </windsorcircle_analyticsmore_review_save_after>
+            </observers>
+          </review_save_after>
+
+          <controller_action_postdispatch_review_product_post>
+            <observers>
+              <windsorcircle_analyticsmore_review_product_post>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer_review</class>
+                <method>reviewedProduct</method>
+              </windsorcircle_analyticsmore_review_product_post>
+            </observers>
+          </controller_action_postdispatch_review_product_post>
+
+          <newsletter_subscriber_save_after>
+            <observers>
+              <windsorcircle_analyticsmore_newsletter_save_after>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>newsletterSubscriber</method>
+              </windsorcircle_analyticsmore_newsletter_save_after>
+            </observers>
+          </newsletter_subscriber_save_after>
+
+          <wishlist_add_product>
+            <observers>
+              <windsorcircle_analyticsmore_wishlist_add>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>wishlistAddProduct</method>
+              </windsorcircle_analyticsmore_wishlist_add>
+            </observers>
+          </wishlist_add_product>
+
+          <sales_order_place_after>
+            <observers>
+              <windsorcircle_analyticsmore_sales_order_place_after>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>orderPlaced</method>
+              </windsorcircle_analyticsmore_sales_order_place_after>
+            </observers>
+          </sales_order_place_after>
+
+          <core_block_abstract_to_html_after>
+            <observers>
+              <windsorcircle_analyticsmore_sales_logger>
+                <type>singleton</type>
+                <class>windsorcircle_analytics/observer</class>
+                <method>logBlockHtml</method>
+              </windsorcircle_analyticsmore_sales_logger>
+            </observers>
+          </core_block_abstract_to_html_after>
+
+        </events>
+
+		<blocks>
+			<windsorcircle_analytics>
+				<class>WindsorCircle_Analytics_Block</class>
+			</windsorcircle_analytics>
+		</blocks>
+		<models>
+			<windsorcircle_analytics>
+				<class>WindsorCircle_Analytics_Model</class>
+			</windsorcircle_analytics>
+		</models>
+		<helpers>
+			<windsorcircle_analytics>
+				<class>WindsorCircle_Analytics_Helper</class>
+			</windsorcircle_analytics>
+		</helpers>
+	</global>
+
+	<default>
+	    <windsorcircle_analytics>
+	        <options>
+	            <customer_traits>
+created_at
+user_id
+email
+first_name
+last_name
+middle_name
+name
+is_active
+updated_at
+total_orders
+total_spent
+</customer_traits>
+	        </options>
+	    </windsorcircle_analytics>
+
+      <windsorcircle_analytics>
+          <options>
+              <product_properties>
+</product_properties>
+          </options>
+      </windsorcircle_analytics>
+      <windsorcircle_analytics>
+          <options>
+              <logout_flush>
+                0
+              </logout_flush>
+          </options>
+      </windsorcircle_analytics>
+	</default>
+
+
+</config>
