@@ -1,0 +1,11 @@
+<?php echo $this->renderDataAsJsonVar('windsorcircle_analytics_page');?>
+<script type="text/javascript">
+    if(windsorcircle_analytics_page.category_names)
+    {
+        window.analytics.page(<?php echo $this->getPropertyAsJavascriptString('full_category_name');?>, <?php echo $this->getPropertyAsJavascriptString('page_name');?>,{},<?php echo $this->getContextJson(); ?>);
+    }
+    else
+    {
+        window.analytics.page(<?php echo $this->getPropertyAsJavascriptString('page_name');?>,{},<?php echo $this->getContextJson(); ?>);
+    }
+</script>

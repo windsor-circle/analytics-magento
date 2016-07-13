@@ -1,0 +1,6 @@
+<?php //echo $this->renderDataAsJsonVar("windsorcircle_analytics_subscribenewsletter");?>
+<script type="text/javascript">
+    analytics.track("Subscribed to Newsletter",
+    <?php echo $this->renderDataAsJsonObject('subscriber'); ?>,
+    <?php echo $this->getContextJson(); ?>  );
+</script>    

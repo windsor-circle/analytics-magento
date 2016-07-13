@@ -1,0 +1,6 @@
+<?php //echo $this->renderDataAsJsonVar("windsorcircle_analytics_amlistfav");?>
+<script type="text/javascript">
+    analytics.track("Favorited Product",
+    <?php echo $this->renderDataAsJsonObject('params'); ?>,
+    <?php echo $this->getContextJson(); ?>);    
+</script>    

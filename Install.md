@@ -57,7 +57,7 @@ Analytics for Magento is distributed as a Magento Connect `tgz` file.  This mean
 
 - Copy the contents of the extension's `app` folder to your server.  Be sure you're uploading the contents of the folder, and not replacing your entire system's app folder
 
-- With the Magento cache off or cleared, browse to `System -> Configuration`, select `Advanced -> Advanced`, and ensure the `Segment_Analytics` extension is installed
+- With the Magento cache off or cleared, browse to `System -> Configuration -> Advanced` and ensure the `WindsorCircle_Analytics` extension is installed
 
 - If you're using the Magento class compiler, recompile your classes
 
