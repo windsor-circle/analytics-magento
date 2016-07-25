@@ -132,12 +132,15 @@ class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
             unset($product['product_id']);
         }
 
-        $blacklist = trim(Mage::getStoreConfig('windsorcircle_analytics/options/product_properties'));
-        $blacklistedFields = preg_split('%[\n\r]%', $blacklist, -1, PREG_SPLIT_NO_EMPTY);
+        $non_negotiables = array(
+            "id", "sku", "name", "price"
+            );
+        $whitelist = trim(Mage::getStoreConfig('windsorcircle_analytics/options/product_properties'));
+        $whitelistedFields = preg_split('%[\n\r]%', $whitelist, -1, PREG_SPLIT_NO_EMPTY);
 
-        foreach($blacklistedFields as $key)
+        foreach($product as $key => $value)
         {
-            if(!array_key_exists($key, $product)) { continue; }
+            if(in_array($key, $whitelistedFields) or in_array($key, $non_negotiables)) { continue; }
             unset($product[$key]);
         }
 
