@@ -133,7 +133,7 @@ class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
         }
 
         $non_negotiables = array(
-            "id", "sku", "name", "price"
+            "id", "sku", "name", "price", "categories"
             );
         $whitelist = trim(Mage::getStoreConfig('windsorcircle_analytics/options/product_properties'));
         $whitelistedFields = preg_split('%[\n\r]%', $whitelist, -1, PREG_SPLIT_NO_EMPTY);
