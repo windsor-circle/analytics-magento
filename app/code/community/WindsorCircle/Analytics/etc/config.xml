@@ -313,6 +313,10 @@ updated_at
 total_orders
 total_spent
 </customer_traits>
+                <product_properties>
+cost
+revenue
+</product_properties>
 	        </options>
 	    </windsorcircle_analytics>
 
