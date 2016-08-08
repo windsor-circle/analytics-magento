@@ -10,7 +10,7 @@ class WindsorCircle_Analytics_Model_Controller_Customerloggedout extends Windsor
             unset($customer[$key]);
         }
         $customer = Mage::helper('windsorcircle_analytics')->getNormalizedCustomerInformation($customer);
-        $block->setUserId($customer['entity_id']);
+        //$block->setUserId($customer['entity_id']);
         return $block;
     }
 }
