@@ -33,7 +33,7 @@ Analytics for Magento is distributed as a Magento Connect `tgz` file.  This mean
 
 ## Uploading the Extension
 
-- Download the extension from the [releases page](https://github.com/segmentio/analytics-magento/releases)
+- Download the extension from the [releases page](https://github.com/windsor-circle/analytics-magento/releases)
 
 - Log into your Magento Admin console
 
