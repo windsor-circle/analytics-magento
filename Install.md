@@ -1,35 +1,11 @@
 Installing Extension
 --------------------------------------------------
 
-Analytics for Magento is distributed as a Magento Connect `tgz` file.  This means there's three ways to install it.
-
-- Directly via a Magento Connect extension key **NOTE**: Link to Connect page when it's setup.
+Analytics for Magento is distributed as a Magento Connect `tgz` file.  This means there's two ways to install it.
 
 - By uploading the `tgz` extension via the Magento Connect Manager
 
 - By copying the extension source manually to your Magento system.
-
-## Magento Connect Key Instructions
-
-- Log into to your Magento Connect Account
-
-- Browse to the Analytics for Magento page on Magento Connect (**NOTE**: Link to page when ready)
-
-- Click the Install Now button
-
-- Copy the Extension Key
-
-- Log into your Magento Admin console
-
-- Browse to `System -> Magento Connect -> Magento Connect Manager`
-
-- Re-enter your credentials
-
-- Paste the extension key from above into the field labeled *Paste Extension Key to Install*
-
-- Click the install button
-
-- Magento Connect will install the package into your system
 
 ## Uploading the Extension
 
