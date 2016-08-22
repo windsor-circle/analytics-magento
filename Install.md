@@ -1,7 +1,7 @@
 Installing Extension
 --------------------------------------------------
 
-Analytics for Magento is distributed as a Magento Connect `tgz` file.  This means there's two ways to install it.
+Windsor Circle Segment Analytics is distributed as a Magento Connect `tgz` file.  This means there's two ways to install it.
 
 - By uploading the `tgz` extension via the Magento Connect Manager
 
