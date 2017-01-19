@@ -1,4 +1,4 @@
-2.0.2 / 2017-01-01
+2.0.2 / 2017-01-19
 ==================
 * Added identify events that occur after the placement of orders.
 
