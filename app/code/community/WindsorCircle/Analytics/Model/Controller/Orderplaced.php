@@ -31,6 +31,17 @@ class WindsorCircle_Analytics_Model_Controller_Orderplaced extends WindsorCircle
         //the serialized information
         $block->setParams($params);
 
+        $customer = $this->_getCustomer();
+        $block->setUserId($customer->getId());
+        $tmp = array();
+        $firstName                = $info['customer_firstname'];
+        $lastName                 = $info['customer_lastname'];
+        $tmp['first_name']         = $firstName;
+        $tmp['last_name']          = $lastName;
+        $tmp['name']              = "$firstName lastName";
+        $tmp['email']             = $info['customer_email'];
+        $block->setCustomerInfo($tmp);
+
         return $block;
     }
 }
