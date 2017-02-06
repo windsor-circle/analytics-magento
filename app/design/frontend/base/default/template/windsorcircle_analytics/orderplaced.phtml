@@ -4,3 +4,9 @@
     <?php echo $this->renderDataAsJsonObject('params'); ?>,
     <?php echo $this->getContextJson(); ?>);
 </script>    
+<!-- After the Completed Order track event, we want to trigger an identify event. -->
+<script type="text/javascript">
+    analytics.identify(<?php echo $this->getPropertyAsJavascriptString('user_id');?>,
+    <?php echo $this->renderDataAsJsonObject('customer_info'); ?>,
+    <?php echo $this->getContextJson(); ?>);
+</script>

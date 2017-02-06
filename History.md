@@ -1,3 +1,7 @@
+2.0.2 / 2017-01-19
+==================
+* Added identify events that occur after the placement of orders.
+
 2.0.1 / 2015-09-17
 ==================
 * Identified and fixed bug affecting added/removed product behavior
