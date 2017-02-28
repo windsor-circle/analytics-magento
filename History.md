@@ -1,3 +1,7 @@
+2.0.3 / 2017-02-28
+==================
+* Distributable updates.
+
 2.0.2 / 2017-01-19
 ==================
 * Added identify events that occur after the placement of orders.
