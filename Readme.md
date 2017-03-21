@@ -1,7 +1,7 @@
 
-# Analytics for Magento
+# Windsor Circle Analytics for Magento
 
-**Analytics for Magento** is a Magento extension for [Segment](https://segment.com) that lets you send data to any analytics tool you want without writing any code yourself!
+**Windsor Circle Analytics for Magento** is a Magento extension that lets you send data to Windsor Circle.
 
 - [Installing](#installing)
 - [Support](#support)

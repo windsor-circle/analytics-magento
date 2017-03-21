@@ -8,7 +8,7 @@ return array(
 
 //The Magento Connect extension name.  Must be unique on Magento Connect
 //Has no relation to your code module name.  Will be the Connect extension name
-'extension_name' => 'analytics',
+'extension_name' => 'windsor_circle_analytics',
 
 //Your extension version.  By default, if you're creating an extension from a
 //single Magento module, the tar-to-connect script will look to make sure this
@@ -34,16 +34,16 @@ return array(
 'channel' => 'community',
 
 //Magento Connect information fields.
-'summary' => 'Segment lets you integrate 100+ analytics and marketing tools without writing any code yourself!',
-'description' => 'Analytics for Magento is a Magento extension by Segment that lets you integrate any analytics or marketing tool you want with the flick of a switch! No code required. When you turn on the plugin, Segment automatically starts tracking important actions, like when users view items, add products to carts, and complete orders. To send this data along to your preferred tools, just go to the Segment control panel and toggle them on. This will save you months of time installing analytics.',
+'summary' => 'Windsor Circle Analytics lets you integrate with Windsor Circle.',
+'description' => 'Windsor Circle Analytics for Magento is a Magento extension that lets you send browse data to Windsor Circle.',
 'notes' => '',
 
 //Magento Connect author information. If author_email is foo@example.com, script will
 //prompt you for the correct name.  Should match your http://www.magentocommerce.com/
 //login email address
-'author_name' => 'Segment',
-'author_user' => 'segmentio',
-'author_email' => 'friends@segment.io',
+'author_name' => 'WindsorCircle',
+'author_user' => 'partners@windsorcircle.com',
+'author_email' => 'partners@windsorcircle.com',
 
 //PHP min/max fields for Connect.  I don't know if anyone uses these, but you should
 //probably check that they're accurate

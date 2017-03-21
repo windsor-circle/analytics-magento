@@ -3,9 +3,9 @@ $this->startSetup();
 $entity = $this->getEntityTypeId('customer');
   
 /* create the new attribute */
-$this->addAttribute($entity, 'is_segment_aliased', array(
+$this->addAttribute($entity, 'is_aliased', array(
 		'type' => 'text',				/* input type */
-		'label' => 'Segment Aliased',	/* Label for the user to read */
+		'label' => 'Aliased',	/* Label for the user to read */
 		'input' => 'text',				/* input type */
 		'visible' => FALSE,				/* users can see it */
 		'required' => FALSE,			/* is it required, self-explanatory */

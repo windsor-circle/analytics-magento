@@ -1,3 +1,7 @@
+2.0.4 / 2017-03-22
+==================
+* Make this plugin push data to Windsor Circle instead of Segment.
+
 2.0.3 / 2017-02-28
 ==================
 * Distributable updates.
