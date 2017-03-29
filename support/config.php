@@ -35,7 +35,7 @@ return array(
 
 //Magento Connect information fields.
 'summary' => 'Windsor Circle Analytics lets you integrate with Windsor Circle.',
-'description' => 'Windsor Circle Analytics for Magento is a Magento extension that lets you send browse data to Windsor Circle.',
+'description' => 'Windsor Circle Analytics for Magento is a Magento extension that lets you send onsite behavioral data to Windsor Circle.',
 'notes' => '',
 
 //Magento Connect author information. If author_email is foo@example.com, script will
