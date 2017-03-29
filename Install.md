@@ -41,7 +41,7 @@ Windsor Circle Analytics is distributed as a Magento Connect `tgz` file.  This m
 
 ## Post Installation Steps
 
-After installing the extension, you may enter your key at
+After installing the extension, you may enter your Windsor Circle Site Analytics key at
 
     System -> Configuration -> Analytics
     
