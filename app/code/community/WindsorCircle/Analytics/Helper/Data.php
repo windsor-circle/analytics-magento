@@ -37,7 +37,7 @@ class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-    * Changes standard page titles per segment API.  Hopefully
+    * Changes standard page titles per API.  Hopefully
     * this is kept to a minimum
     * @todo refactor if this goes beyond page
     */
@@ -117,7 +117,7 @@ class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
         }
         $product['categories'] = $this->getCategoryNamesFromIds($product['categories']);
 
-        //cast numerics as floats per segment requirements
+        //cast numerics as floats per requirements
         $as_float = array('price','weight');
         foreach($as_float as $key)
         {
@@ -125,7 +125,7 @@ class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
             $product[$key] = (float) $product[$key];
         }
 
-        //segments wants "id" not product_id
+        // wants "id" not product_id
         if(array_key_exists('product_id', $product))
         {
             $product['id'] = $product['product_id'];
@@ -153,7 +153,7 @@ class WindsorCircle_Analytics_Helper_Data extends Mage_Core_Helper_Abstract
 
     /**
     * Central place for casting of '1' and '0' as boolean
-    * where we know it needs to happen. Segment API requirement
+    * where we know it needs to happen. API requirement
     */
     public function getDataCastAsBooleans($data)
     {

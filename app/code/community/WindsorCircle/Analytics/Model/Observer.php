@@ -263,7 +263,6 @@ class WindsorCircle_Analytics_Model_Observer
             return;
         }
 
-        #Mage::Log($observer->getTransport()->getHtml(), Zend_Log::INFO, 'segment.log');
     }
 
     public function addClickedShareJavascript($observer)

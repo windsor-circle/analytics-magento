@@ -1,6 +1,6 @@
 <?php 
 /**
-* Front Controller for segment actions. Simple
+* Front Controller for actions. Simple
 * static class to avoid extra Magento perf. overhead
 */
 class WindsorCircle_Analytics_Model_Front_Controller

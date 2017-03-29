@@ -1,7 +1,7 @@
 Installing Extension
 --------------------------------------------------
 
-Windsor Circle Segment Analytics is distributed as a Magento Connect `tgz` file.  This means there's two ways to install it.
+Windsor Circle Analytics is distributed as a Magento Connect `tgz` file.  This means there's two ways to install it.
 
 - By uploading the `tgz` extension via the Magento Connect Manager
 
@@ -41,7 +41,7 @@ Windsor Circle Segment Analytics is distributed as a Magento Connect `tgz` file.
 
 ## Post Installation Steps
 
-After installing the extension, you may enter your Segment key at
+After installing the extension, you may enter your Windsor Circle Site Analytics key at
 
     System -> Configuration -> Analytics
     
