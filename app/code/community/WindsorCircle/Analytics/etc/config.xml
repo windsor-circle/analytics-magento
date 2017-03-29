@@ -30,7 +30,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_scripts_addfrontend>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>addFrotnendScripts</method>
               </windsorcircle_analyticsmore_scripts_addfrontend>
@@ -40,7 +40,7 @@
           <customer_login>
             <observers>
               <windsorcircle_analyticsmore_scripts>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>loggedIn</method>
               </windsorcircle_analyticsmore_scripts>
@@ -50,7 +50,7 @@
           <customer_logout>
             <observers>
               <windsorcircle_analyticsmore_scripts>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>loggedOut</method>
               </windsorcircle_analyticsmore_scripts>
@@ -60,7 +60,7 @@
           <checkout_cart_add_product_complete>
             <observers>
               <windsorcircle_analyticsmore_scripts>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>addToCart</method>
               </windsorcircle_analyticsmore_scripts>
@@ -70,7 +70,7 @@
           <sales_quote_remove_item>
             <observers>
               <windsorcircle_analyticsmore_scripts_remove_item>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>removeFromCart</method>
               </windsorcircle_analyticsmore_scripts_remove_item>
@@ -80,7 +80,7 @@
           <controller_action_layout_render_before>
             <observers>
               <windsorcircle_analyticsmore_blocks>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>addContainerBlock</method>
               </windsorcircle_analyticsmore_blocks>
@@ -90,7 +90,7 @@
           <catalogsearch_query_load_after>
             <observers>
               <windsorcircle_analyticsmore_search>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>loadedSearch</method>
               </windsorcircle_analyticsmore_search>
@@ -100,7 +100,7 @@
           <customer_register_success>
             <observers>
               <windsorcircle_analyticsmore_customer_register_success>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>customerRegistered</method>
               </windsorcircle_analyticsmore_customer_register_success>
@@ -110,7 +110,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_category_view_for_share_tab>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>addClickedShareJavascript</method>
               </windsorcircle_analyticsmore_category_view_for_share_tab>
@@ -120,7 +120,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_category_view_for_review_tab>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>addClickedReviewTabJavascript</method>
               </windsorcircle_analyticsmore_category_view_for_review_tab>
@@ -130,7 +130,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_category_view_for_image_thumbs>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>viewedImageFrontendTrack</method>
               </windsorcircle_analyticsmore_category_view_for_image_thumbs>
@@ -140,7 +140,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_category_view_for_filtering>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>categoryViewForFiltering</method>
               </windsorcircle_analyticsmore_category_view_for_filtering>
@@ -150,7 +150,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_category_view_for_welcome>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer_admin</class>
                 <method>addExplainationTextToConfigScreen</method>
               </windsorcircle_analyticsmore_category_view_for_welcome>
@@ -160,7 +160,7 @@
           <catalog_product_collection_apply_limitations_after>
             <observers>
               <windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer_layered</class>
                 <method>flagIsFiltered</method>
               </windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
@@ -170,7 +170,7 @@
           <controller_action_predispatch_catalog_product_gallery>
             <observers>
               <windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>productGalleryViewed</method>
               </windsorcircle_analyticsmore_catalog_product_collection_apply_limitations_after>
@@ -181,7 +181,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_category_view>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer_layered</class>
                 <method>addLayeredLimitation</method>
               </windsorcircle_analyticsmore_category_view>
@@ -191,7 +191,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_review_view>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>reviewView</method>
               </windsorcircle_analyticsmore_review_view>
@@ -201,7 +201,7 @@
           <controller_action_layout_generate_blocks_after>
             <observers>
               <windsorcircle_analyticsmore_product_view>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>productView</method>
               </windsorcircle_analyticsmore_product_view>
@@ -211,7 +211,7 @@
           <core_abstract_save_after>
             <observers>
               <windsorcircle_analyticsmore_amasty_fav_save_after>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>favSaved</method>
               </windsorcircle_analyticsmore_amasty_fav_save_after>
@@ -221,7 +221,7 @@
           <review_save_after>
             <observers>
               <windsorcircle_analyticsmore_review_save_after>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer_review</class>
                 <method>markReviewSaved</method>
               </windsorcircle_analyticsmore_review_save_after>
@@ -231,7 +231,7 @@
           <controller_action_postdispatch_review_product_post>
             <observers>
               <windsorcircle_analyticsmore_review_product_post>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer_review</class>
                 <method>reviewedProduct</method>
               </windsorcircle_analyticsmore_review_product_post>
@@ -241,7 +241,7 @@
           <newsletter_subscriber_save_after>
             <observers>
               <windsorcircle_analyticsmore_newsletter_save_after>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>newsletterSubscriber</method>
               </windsorcircle_analyticsmore_newsletter_save_after>
@@ -251,7 +251,7 @@
           <wishlist_add_product>
             <observers>
               <windsorcircle_analyticsmore_wishlist_add>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>wishlistAddProduct</method>
               </windsorcircle_analyticsmore_wishlist_add>
@@ -261,7 +261,7 @@
           <sales_order_place_after>
             <observers>
               <windsorcircle_analyticsmore_sales_order_place_after>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>orderPlaced</method>
               </windsorcircle_analyticsmore_sales_order_place_after>
@@ -271,7 +271,7 @@
           <core_block_abstract_to_html_after>
             <observers>
               <windsorcircle_analyticsmore_sales_logger>
-                <type>singleton</type>
+                <type>model</type>
                 <class>windsorcircle_analytics/observer</class>
                 <method>logBlockHtml</method>
               </windsorcircle_analyticsmore_sales_logger>
